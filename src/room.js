@@ -1,5 +1,6 @@
 import React from 'react';
 import  { useState } from 'react';
+import './room.css'
 
 function Room() {
     const [islit, setlit] = useState(false);
@@ -13,7 +14,7 @@ function Room() {
         setage(++age);
     }
 return (
-<div>
+<div className={`room ${islit? "lit": "dark"}`}>
     This is the room where it happens and it's {islit? "lit": "dark"} and my age is {age}
    <br/>
     <button onClick={uplit}>Toggle Light</button>
